@@ -1,22 +1,13 @@
 #include<stdio.h>
-int main(){
-	 int a , b ;
-     
-	 printf("Nhap a,b");
-	 scanf("%d,%d",&a,&b);
-	 printf("Nhap phep toan: ");
-	 char pt ;
-	 fflush(stdin);
-	 scanf("%c",&pt);
-	 if(b==0)
-	        printf("Khong the chia cho 0 ");	
-	 else 
-	 {
-	 	float kq = (float)a/b;
-	 	printf("Ketqua: %d %c %d =%.2f",a,pt ,b , kq);
-	 }
-}
-	  
-	  
-	
-	 
+#include<math.h>
+ int main(){
+ 	int n;
+ 	printf("Nhap n : ");
+ 	scanf("%d",n);
+ 	//Bu?c 1  ki?m tra n  < 2 
+    if(n<2) {
+    	printf("%d khong phai la so nguyen to\n",n);
+    	
+	}
+ 	
+ }
