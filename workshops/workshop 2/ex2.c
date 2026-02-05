@@ -12,6 +12,6 @@ int main(){
 	}
 	printf("Can bac 2 la : %.2f\n",sqrt(n));
 	count++;
-   }
-   	printf("\nDa xong , xuat sac");
+	
+}
 }
