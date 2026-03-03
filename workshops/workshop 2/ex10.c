@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float balance = 10000.0;
+    float balance = 100000000.0;
     float withdraw_amount;
     int choice;
 
@@ -40,7 +40,6 @@ int main() {
                 printf("\n----------- ?? RUT TIEN ?? ------------------\n");
                 printf("Nhap so tien muon rut: ");
 
-                /* CH?N NH?P CH? + <= 0 */
                 while (scanf("%f", &withdraw_amount) != 1 || withdraw_amount <= 0) {
                     printf("? So tien phai la SO va > 0. Nhap lai: ");
                     while (getchar() != '\n');

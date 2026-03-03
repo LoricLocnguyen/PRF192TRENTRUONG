@@ -4,8 +4,8 @@
 int main(){
 	int socuatoi, socuamay;
 	srand(time(NULL));
-	socuamay =rand() % 10;
-	printf("T co so tu (0-9) t thach m doan duoc : \n ");
+	socuamay =rand() % 100;
+	printf("T co so tu (0-99) t thach m doan duoc : \n ");
 	while(1){
 	
 	printf("Nhap so di ni : ");
