@@ -36,4 +36,3 @@ int main(){
 	}
 	printf("Thang %d thuoc quy %d ",thang,quy);
 }
-}
