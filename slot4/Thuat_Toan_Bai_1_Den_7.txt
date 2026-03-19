@@ -1,0 +1,53 @@
+GIẢI THÍCH THUẬT TOÁN NGẮN GỌN (TỪ BÀI 1 ĐẾN BÀI 7)
+-------------------------------------------------
+
+Bài 1: Đếm số lượng ký tự trong chuỗi (không dùng hàm strlen có sẵn)
+Bước 1: Khởi tạo biến dem = 0, mảng chuoi[] = rỗng.
+Bước 2: Yêu cầu người dùng nhập chuỗi từ bàn phím (dùng lệnh fgets).
+Bước 3: Duyệt vòng lặp qua từng ký tự của chuỗi cho đến khi gặp ký tự kết thúc '\0'.
+Bước 4: Nếu ký tự đang xét là dấu xuống dòng '\n' thì xóa nó đi và thoát vòng lặp. Nếu không, tăng biến dem lên 1.
+Bước 5: In ra màn hình giá trị của biến dem.
+
+Bài 2: Đảo ngược chuỗi ký tự
+Bước 1: Khởi tạo biến do_dai = 0, nhập chuỗi từ bàn phím.
+Bước 2: Tìm độ dài thực tế của chuỗi (giống giống Bước 3, 4 của Bài 1).
+Bước 3: Chạy vòng lặp đếm ngược từ vị trí cuối cùng của chuỗi (tức là vị trí do_dai - 1) lùi dần về 0.
+Bước 4: Mỗi vòng lặp, lấy 1 ký tự tại vị trí đó in ra luôn để tạo thành chuỗi đọc ngược.
+
+Bài 3: Kiểm tra chuỗi đối xứng (Palindrome)
+Bước 1: Nhập một chuỗi viết liền (không chứa khoảng trắng) bằng lệnh scanf.
+Bước 2: Tìm độ dài thực tế của chuỗi, lưu vào biến do_dai.
+Bước 3: Khởi tạo một cờ kiểm tra la_doi_xung = 1 (mặc định là Đúng).
+Bước 4: Chạy vòng lặp từ đầu chuỗi đến vị trí chính giữa chuỗi (do_dai / 2).
+Bước 5: So sánh ký tự thứ i ở nửa đầu với ký tự tương ứng nằm ở nửa cuối (tại vị trí do_dai - 1 - i).
+Bước 6: Nếu cặp ký tự này KHÁC nhau -> Gán cờ la_doi_xung = 0 (Sai) và dừng vòng lặp ngay lập tức vì chắc chắn không đối xứng.
+Bước 7: Kiểm tra cờ, in ra "Yes" nếu cờ vẫn bằng 1, ngược lại in ra "No".
+
+Bài 4: Đếm số lượng TỪ trong chuỗi chứa nhiều khoảng trắng nối tiếp
+Bước 1: Nhập chuỗi tự do, tạo 2 biến: so_tu = 0 và trạng thái trong_tu = 0 (Sai).
+Bước 2: Duyệt từng ký tự của chuỗi (nhớ xử lý loại bỏ ký tự ngắt dòng '\n').
+Bước 3: Kiểm tra ký tự hiện tại có phải là KHỎANG TRẮNG (Space) hay không?
+Bước 4: Nếu KHÔNG phải khoảng trắng VÀ đang không nằm trong từ nào (trong_tu == 0) -> Đánh dấu bắt đầu là 1 từ mới, chuyển trong_tu = 1 và tăng so_tu lên 1.
+Bước 5: Nếu gặp 1 KHOẢNG TRẮNG -> Đánh dấu kết thúc từ, gán trong_tu = 0. Cứ lặp thế đến hết chuỗi rồi in ra biến so_tu.
+
+Bài 5: Tìm và thay thế ký tự trong chuỗi
+Bước 1: Lần lượt nhập chuỗi ban đầu, nhập ký tự cần tìm (gọi là X), ký tự thay thế (gọi là Y).
+Bước 2: Khởi tạo biến đếm so_lan_thay = 0.
+Bước 3: Duyệt lần lượt từng vị trí trong chuỗi ban đầu.
+Bước 4: Nếu dòm thấy ký tự tại vị trí đó GIỐNG ký tự X -> Ghi đè ký tự Y đè thẳng vào vị trí đó, đồng thời tăng so_lan_thay lên 1.
+Bước 5: Kết thúc vòng lặp, in ra 2 dòng kết quả: biến đếm và Chuỗi đã được ghi đè.
+
+Bài 6: Sắp xếp danh sách tên sinh viên (A-Z)
+Bước 1: Nhập số lượng sinh viên N, lặp N lần để lưu đủ danh sách họ tên vào một mảng chuỗi 2 chiều.
+Bước 2: Sử dụng thuật toán nổi bọt (Bubble Sort) với 2 vòng lặp (i và j) lồng vào nhau.
+Bước 3: Bên trong lặp, dùng hàm chuẩn strcmp() để so sánh độ lớn của 2 tên Tên[i] và Tên[j].
+Bước 4: Nếu Tên[i] lớn hơn (tức là đứng sau) Tên[j] theo từ điển -> Dùng hàm strcpy() để bê 2 cái tên đó tráo đổi chỗ cho nhau (phải tráo thông qua 1 biến tạm tam).
+Bước 5: Chạy xong thuật toán, dùng vòng lặp in danh sách tên ra màn hình.
+
+Bài 7: Phân tách đếm số lượng Chữ số, Chữ cái và Ký tự đặc biệt
+Bước 1: Nhập vào chuỗi hỗn hợp gồm đủ thứ thành phần. Khởi tạo 3 biến đếm: so_Dem_So = 0, so_Dem_Chu = 0, so_Dem_Ky_Tu_Khac = 0.
+Bước 2: Duyệt vòng lặp đi ngang qua từng ký tự của mảng chuỗi đó.
+Bước 3: Nếu mã máy tính của ký tự nằm trong đoạn từ '0' đến '9' -> Tăng biến đếm Số học.
+Bước 4: Còn nếu mã ký tự nằm trong dải đoạn 'a' đến 'z' HOẶC từ 'A' đến 'Z' -> Tăng biến đếm Chữ Cái.
+Bước 5: Các trường hợp còn lại rớt hết 2 lưới lọc trên (như khoảng trắng, dấu !, @) -> Tăng biến đếm Ký Tự Khác.
+Bước 6: In thứ tự cột dọc lần lượt 3 biến đếm ra màn hình là xong.
